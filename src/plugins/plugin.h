@@ -241,6 +241,10 @@ struct janus_plugin_session {
 	void *gateway_handle;
 	/*! \brief Opaque pointer to the plugin session */
 	void *plugin_handle;
+	/*! \brief Janus Core-Client session ID */
+	guint64 session_id;
+	/*! \brief Handle identifier, guaranteed to be non-zero */
+	guint64 handle_id;
 	/*! \brief Whether this mapping has been stopped definitely or not: if so,
 	 * the plugin shouldn't make use of it anymore */
 	volatile gint stopped;
